@@ -10,10 +10,10 @@ class Task4 {
         int sum = 0;
         int multiply = 1;
 
-        for (String s : args) {
-            int i = Integer.parseInt(s);
-            sum += i;
-            multiply *= i;
+        for (String str : args) {
+            int tmpInt = Integer.parseInt(str);
+            sum += tmpInt;
+            multiply *= tmpInt;
         }
         System.out.println("the result of the sum is " + sum);
         System.out.println("the result of the multiplication is " + multiply);

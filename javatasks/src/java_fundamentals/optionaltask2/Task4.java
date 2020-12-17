@@ -5,24 +5,24 @@ package java_fundamentals.optionaltask2;
  */
 class Task4 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSize());
+        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
         Methods.printMatrix(matrix);
 
-        int max = matrix[0][0];
+        int maxValueInMatix = matrix[0][0];
         for (int[] row : matrix) {
             for (int i : row) {
-                if (i > max) {
-                    max = i;
+                if (i > maxValueInMatix) {
+                    maxValueInMatix = i;
                 }
             }
         }
-        System.out.println("max: " + max);
+        System.out.println("max: " + maxValueInMatix);
 
         boolean[] deleteRow = new boolean[matrix.length];
         boolean[] deleteColumn = new boolean[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             for (int k = 0; k < matrix.length; k++) {
-                if (matrix[i][k] == max) {
+                if (matrix[i][k] == maxValueInMatix) {
                     deleteRow[i] = true;
                     deleteColumn[k] = true;
                 }

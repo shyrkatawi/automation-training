@@ -10,25 +10,25 @@ class Task3 {
     public static void main(String[] args) {
         int limit = getNumberFromScanner();
         for (int i = 0; i < limit; i++) {
-            System.out.println(getRandomInt());
+            System.out.println(generateRandomInt(limit));
         }
         for (int i = 0; i < limit; i++) {
-            System.out.print(getRandomInt());
+            System.out.print(generateRandomInt(limit));
         }
     }
 
     private static int getNumberFromScanner() {
-        try (Scanner sc = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter the number");
-            if (sc.hasNextInt()) {
-                return sc.nextInt();
+            if (scanner.hasNextInt()) {
+                return scanner.nextInt();
             }
             System.out.println("ERROR: wrong input, try again");
             return 0;
         }
     }
 
-    private static int getRandomInt() {
-        return new Random().nextInt(10);
+    private static int generateRandomInt(int bound) {
+        return new Random().nextInt(bound+5);
     }
 }

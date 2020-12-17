@@ -8,12 +8,12 @@ import java.util.List;
  */
 class Task2 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
-            list.sort(Comparator.comparingInt(Methods::calculateLength));
-            Methods.printList(list, "sorted elements by length in ascending order");
-            list.sort(Comparator.comparingInt(Methods::calculateLength).reversed());
-            Methods.printList(list, "sorted elements by length in descending order");
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
+            integerList.sort(Comparator.comparingInt(Methods::calculateLengthOfInteger));
+            Methods.printList(integerList, "sorted elements by length in ascending order");
+            integerList.sort(Comparator.comparingInt(Methods::calculateLengthOfInteger).reversed());
+            Methods.printList(integerList, "sorted elements by length in descending order");
         }
     }
 }

@@ -7,17 +7,17 @@ import java.util.List;
  */
 class Task3 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
             int totalLength = 0;
-            for (Integer i : list) {
-                totalLength += Methods.calculateLength(i);
+            for (Integer i : integerList) {
+                totalLength += Methods.calculateLengthOfInteger(i);
             }
-            int averageLength = totalLength / list.size();
+            int averageLength = totalLength / integerList.size();
             StringBuilder elementsWithLengthLessThanAverage = new StringBuilder();
             StringBuilder elementsWithLengthGreaterThanAverage = new StringBuilder();
-            for (Integer i : list) {
-                int tmpLength = Methods.calculateLength(i);
+            for (Integer i : integerList) {
+                int tmpLength = Methods.calculateLengthOfInteger(i);
                 if (tmpLength < averageLength) {
                     elementsWithLengthLessThanAverage.append(i).append(" ");
                 }

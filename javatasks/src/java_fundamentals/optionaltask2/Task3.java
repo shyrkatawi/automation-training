@@ -7,29 +7,29 @@ import java.util.Arrays;
  */
 class Task3 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSize());
+        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
         Methods.printMatrix(matrix);
         for (int[] array : matrix) {
-            int firstPositiveIndex = -1;
-            int secondPositiveIndex = -1;
+            int indexOfFirstPositiveNumber = -1;
+            int indexOfSecondPositiveNumber = -1;
             boolean isFirstPositive = true;
             for (int i = 0; i < array.length; i++) {
                 if (array[i] >= 0) {
                     if (isFirstPositive) {
-                        firstPositiveIndex = i;
+                        indexOfFirstPositiveNumber = i;
                         isFirstPositive = false;
                     } else {
-                        secondPositiveIndex = i;
+                        indexOfSecondPositiveNumber = i;
                         break;
                     }
                 }
             }
-            if (firstPositiveIndex != -1 && secondPositiveIndex != -1) {
+            if (indexOfFirstPositiveNumber != -1 && indexOfSecondPositiveNumber != -1) {
                 int sum = 0;
-                firstPositiveIndex++;
-                while (firstPositiveIndex != secondPositiveIndex) {
-                    sum += array[firstPositiveIndex];
-                    firstPositiveIndex++;
+                indexOfFirstPositiveNumber++;
+                while (indexOfFirstPositiveNumber != indexOfSecondPositiveNumber) {
+                    sum += array[indexOfFirstPositiveNumber];
+                    indexOfFirstPositiveNumber++;
                 }
                 System.out.printf("row: %s, between the first and second positive elements: %d\n", Arrays.toString(array), sum);
             }

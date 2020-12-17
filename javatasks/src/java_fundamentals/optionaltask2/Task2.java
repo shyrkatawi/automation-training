@@ -9,25 +9,25 @@ import java.util.List;
  */
 class Task2 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSize());
+        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
         Methods.printMatrix(matrix);
 
         int[] array = transformMatrixToArray(matrix);
         System.out.println(Arrays.toString(array));
 
-        List<Integer> tmpList = new ArrayList<>();
-        List<Integer> increasingElements = new ArrayList<>();
+        List<Integer> tmpIntegerList = new ArrayList<>();
+        List<Integer> increasingElementsList = new ArrayList<>();
 
         for (int i = 0; i < array.length - 1; i++) {
-            tmpList.add(array[i]);
+            tmpIntegerList.add(array[i]);
             if (array[i] >= array[i + 1]) {
-                if (tmpList.size() > increasingElements.size()) {
-                    increasingElements = tmpList;
+                if (tmpIntegerList.size() > increasingElementsList.size()) {
+                    increasingElementsList = tmpIntegerList;
                 }
-                tmpList = new ArrayList<>();
+                tmpIntegerList = new ArrayList<>();
             }
         }
-        System.out.println(increasingElements.toString());
+        System.out.println(increasingElementsList.toString());
     }
 
     static int[] transformMatrixToArray(int[][] matrix) {

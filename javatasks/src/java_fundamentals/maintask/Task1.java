@@ -7,10 +7,10 @@ import java.util.Scanner;
  */
 class Task1 {
     public static void main(String[] args) {
-        try (Scanner sc = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter your name");
-            String str = sc.next();
-            System.out.printf("Hello %s!\n", str);
+            String usernameFromScanner = scanner.next();
+            System.out.printf("Hello %s!\n", usernameFromScanner);
         }
     }
 }

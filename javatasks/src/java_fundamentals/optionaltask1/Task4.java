@@ -8,18 +8,18 @@ import java.util.List;
  */
 class Task4 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
-            int n = list.get(0);
-            int minAmount = getAmountOfDifferentDigits(n);
-            for (Integer i : list) {
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
+            int n = integerList.get(0);
+            int minAmountOfDifferentDigits = getAmountOfDifferentDigits(n);
+            for (Integer i : integerList) {
                 int tmpAmount = getAmountOfDifferentDigits(i);
-                if (minAmount > tmpAmount) {
+                if (minAmountOfDifferentDigits > tmpAmount) {
                     n = i;
-                    minAmount = tmpAmount;
+                    minAmountOfDifferentDigits = tmpAmount;
                 }
             }
-            System.out.println("minimum amount of different digits is " + minAmount);
+            System.out.println("minimum amount of different digits is " + minAmountOfDifferentDigits);
             System.out.println("number with min amount is " + n);
         }
 
@@ -27,15 +27,15 @@ class Task4 {
 
     static int getAmountOfDifferentDigits(int n) {
         boolean[] include = new boolean[10];
-        int count = 0;
+        int counter = 0;
         while (n > 0) {
             int digit = n % 10;
             if (!include[digit]) {
                 include[digit] = true;
-                count++;
+                counter++;
             }
             n /= 10;
         }
-        return count;
+        return counter;
     }
 }

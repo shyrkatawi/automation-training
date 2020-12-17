@@ -8,11 +8,11 @@ import java.util.List;
  */
 class Task5 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
-            int onlyEvenCount = 0;
-            int countOfSameNumberOfEvenAndOdd = 0;
-            for (Integer i : list) {
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
+            int counterOfNumbersThatHaveOnlyEvenDigits = 0;
+            int counterOfNumbersThatHaveSameNumberOfEvenAndOdd = 0;
+            for (Integer i : integerList) {
                 int numberOfEven = 0;
                 int numberOfOdd = 0;
                 while (i > 0) {
@@ -25,13 +25,13 @@ class Task5 {
                     i /= 10;
                 }
                 if (numberOfOdd == 0) {
-                    onlyEvenCount++;
+                    counterOfNumbersThatHaveOnlyEvenDigits++;
                 } else if (numberOfEven == numberOfOdd) {
-                    countOfSameNumberOfEvenAndOdd++;
+                    counterOfNumbersThatHaveSameNumberOfEvenAndOdd++;
                 }
             }
-            System.out.println("the number of numbers with only even digits is " + onlyEvenCount);
-            System.out.println("the number of numbers with the same number of even and odd digits is " + countOfSameNumberOfEvenAndOdd);
+            System.out.println("the number of numbers with only even digits is " + counterOfNumbersThatHaveOnlyEvenDigits);
+            System.out.println("the number of numbers with the same number of even and odd digits is " + counterOfNumbersThatHaveSameNumberOfEvenAndOdd);
         }
     }
 

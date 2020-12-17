@@ -8,9 +8,9 @@ import java.util.List;
  */
 class Task6 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
-            for (Integer i : list) {
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
+            for (Integer i : integerList) {
                 if (isIncreasingSequence(i)) {
                     System.out.println(i + " is number whose digits are in strict ascending order");
                     break;
@@ -20,13 +20,13 @@ class Task6 {
     }
 
     static boolean isIncreasingSequence(int i) {
-        int max = 10;
+        int limit = 10;
         while (i > 0) {
             int digit = i % 10;
-            if (max <= digit) {
+            if (limit <= digit) {
                 return false;
             }
-            max = digit;
+            limit = digit;
             i /= 10;
         }
         return true;

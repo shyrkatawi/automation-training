@@ -7,12 +7,12 @@ import java.util.List;
  */
 class Task1 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
-            int minLength = Methods.calculateLength(list.get(0));
-            int maxLength = Methods.calculateLength(list.get(0));
-            for (Integer i : list) {
-                int tmpLength = Methods.calculateLength(i);
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
+            int minLength = Methods.calculateLengthOfInteger(integerList.get(0));
+            int maxLength = Methods.calculateLengthOfInteger(integerList.get(0));
+            for (Integer i : integerList) {
+                int tmpLength = Methods.calculateLengthOfInteger(i);
                 if (minLength > tmpLength) {
                     minLength = tmpLength;
                 }
@@ -22,8 +22,8 @@ class Task1 {
             }
             StringBuilder elementsWithMinLength = new StringBuilder();
             StringBuilder elementsWithMaxLength = new StringBuilder();
-            for (Integer i : list) {
-                int tmpLength = Methods.calculateLength(i);
+            for (Integer i : integerList) {
+                int tmpLength = Methods.calculateLengthOfInteger(i);
                 if (minLength == tmpLength) {
                     elementsWithMinLength.append(i).append(" ");
                 }

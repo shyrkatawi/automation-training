@@ -5,33 +5,33 @@ import java.util.List;
 import java.util.Scanner;
 
 class Methods {
-    static List<Integer> getIntsFromScanner() {
-        try (Scanner sc = new Scanner(System.in)) {
-            List<Integer> list = new ArrayList<>();
-            boolean flag = true;
-            while (flag) {
+    static List<Integer> getIntegerListFromScanner() {
+        try (Scanner scanner = new Scanner(System.in)) {
+            List<Integer> integerList = new ArrayList<>();
+            boolean isContinueInput = true;
+            while (isContinueInput) {
                 System.out.println("Enter the number, to stop, enter a non-number");
-                if (sc.hasNextInt()) {
-                    list.add(sc.nextInt());
+                if (scanner.hasNextInt()) {
+                    integerList.add(scanner.nextInt());
                 } else {
-                    flag = false;
+                    isContinueInput = false;
                 }
             }
-            printList(list,"you entered: ");
-            return list;
+            printList(integerList,"you entered: ");
+            return integerList;
         }
     }
 
-    static int calculateLength(int n) {
-        if (n == 0) {
+    static int calculateLengthOfInteger(int i) {
+        if (i == 0) {
             return 1;
         }
-        int amount = 0;
-        while (n != 0) {
-            amount++;
-            n /= 10;
+        int length = 0;
+        while (i != 0) {
+            length++;
+            i /= 10;
         }
-        return amount;
+        return length;
     }
 
     static void printList(List<Integer> list, String message) {

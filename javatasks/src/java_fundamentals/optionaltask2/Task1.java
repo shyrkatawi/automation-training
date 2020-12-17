@@ -8,7 +8,7 @@ import java.util.Comparator;
  */
 class Task1 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSize());
+        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
         int k = 3;
         Methods.printMatrix(matrix);
         sortRowsByColumnValues(matrix, k);

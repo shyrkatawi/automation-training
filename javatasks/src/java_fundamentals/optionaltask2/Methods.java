@@ -4,11 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Methods {
-    static int getMatrixSize() {
-        try (Scanner sc = new Scanner(System.in)) {
+    static int getMatrixSizeFromScanner() {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter the matrix size");
-            if (sc.hasNextInt()) {
-                return sc.nextInt();
+            if (scanner.hasNextInt()) {
+                return scanner.nextInt();
             }
         }
         System.out.println("ERROR: wrong input, try again");

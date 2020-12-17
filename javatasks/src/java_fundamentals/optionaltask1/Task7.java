@@ -8,18 +8,18 @@ import java.util.List;
  */
 class Task7 {
     public static void main(String[] args) {
-        List<Integer> list = Methods.getIntsFromScanner();
-        if (list.size() != 0) {
-            for (Integer i : list) {
-                if (isDifferentDigits(i)) {
-                    System.out.println(i + " is number consisting only of different digits.");
+        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        if (integerList.size() != 0) {
+            for (Integer i : integerList) {
+                if (isContainsDifferentDigits(i)) {
+                    System.out.println(i + " contains only of different digits.");
                     break;
                 }
             }
         }
     }
 
-    static boolean isDifferentDigits(int n) {
+    static boolean isContainsDifferentDigits(int n) {
         boolean[] include = new boolean[10];
         while (n > 0) {
             int digit = n % 10;

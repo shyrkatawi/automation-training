@@ -17,10 +17,10 @@ class Task5 {
     }
 
     private static int getNumberOfTheMonthFromScanner() {
-        try (Scanner sc = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter the number of the month (n > 0 and n < 13)");
-            if (sc.hasNextInt()) {
-                int n = sc.nextInt();
+            if (scanner.hasNextInt()) {
+                int n = scanner.nextInt();
                 if (n > 0 && n < 13) {
                     return n;
                 }
