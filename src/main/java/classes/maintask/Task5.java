@@ -1,4 +1,4 @@
-package java_classes;
+package classes.maintask;
 
 /**
  * 5. Создать класс Book, спецификация которого приведена ниже.

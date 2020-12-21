@@ -1,4 +1,4 @@
-package java_classes;
+package classes.maintask;
 
 class Books {
     private Book[] books;

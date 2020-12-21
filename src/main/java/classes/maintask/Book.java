@@ -1,4 +1,4 @@
-package java_classes;
+package classes.maintask;
 
 import java.util.Arrays;
 
