@@ -1,8 +1,10 @@
-import planes.ExperimentalPlane;
-import models.MilitaryType;
-import planes.MilitaryPlane;
-import planes.PassengerPlane;
-import planes.Plane;
+package aircompany;
+
+import aircompany.models.MilitaryType;
+import aircompany.planes.ExperimentalPlane;
+import aircompany.planes.MilitaryPlane;
+import aircompany.planes.PassengerPlane;
+import aircompany.planes.Plane;
 
 import java.util.*;
 

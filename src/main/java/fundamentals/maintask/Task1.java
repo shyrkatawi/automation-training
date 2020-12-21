@@ -1,4 +1,4 @@
-package java_fundamentals.maintask;
+package fundamentals.maintask;
 
 import java.util.Scanner;
 

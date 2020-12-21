@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask1;
+package fundamentals.optionaltask1;
 
 import java.util.List;
 
@@ -7,17 +7,17 @@ import java.util.List;
  */
 class Task3 {
     public static void main(String[] args) {
-        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        List<Integer> integerList = Utils.getIntegerListFromScanner();
         if (integerList.size() != 0) {
             int totalLength = 0;
             for (Integer i : integerList) {
-                totalLength += Methods.calculateLengthOfInteger(i);
+                totalLength += Utils.calculateLengthOfInteger(i);
             }
             int averageLength = totalLength / integerList.size();
             StringBuilder elementsWithLengthLessThanAverage = new StringBuilder();
             StringBuilder elementsWithLengthGreaterThanAverage = new StringBuilder();
             for (Integer i : integerList) {
-                int tmpLength = Methods.calculateLengthOfInteger(i);
+                int tmpLength = Utils.calculateLengthOfInteger(i);
                 if (tmpLength < averageLength) {
                     elementsWithLengthLessThanAverage.append(i).append(" ");
                 }

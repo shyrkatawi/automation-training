@@ -1,9 +1,8 @@
-package java_collections.maintask.tests;
+package collections.maintask;
 
-import java_collections.maintask.TaxiCompany;
-import java_collections.maintask.cars.TaxiCar;
-import java_collections.maintask.types.BodyType;
-import java_collections.maintask.types.EngineType;
+import collections.maintask.cars.TaxiCar;
+import collections.maintask.types.BodyType;
+import collections.maintask.types.EngineType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,7 +24,7 @@ public class TaxiCompanyTest {
 
     @Test
     public void calculateTotalCostOfCompany() {
-        Assert.assertEquals(8500,taxiCompany.calculateTotalCostOfCompany());
+        Assert.assertEquals(8500, taxiCompany.calculateTotalCostOfCompany());
     }
 
     @Test
@@ -39,7 +38,7 @@ public class TaxiCompanyTest {
         );
         TaxiCompany sortedTaxiCompany = new TaxiCompany(new ArrayList<>(taxiCarList));
         sortedTaxiCompany.sortTaxiCarsByFuelConsumption();
-        Assert.assertEquals(sortedResultList,sortedTaxiCompany.getTaxiCarList());
+        Assert.assertEquals(sortedResultList, sortedTaxiCompany.getTaxiCarList());
     }
 
     @Test
@@ -48,6 +47,6 @@ public class TaxiCompanyTest {
                 new TaxiCar(10, 110, BodyType.HATCHBACK, EngineType.DIESEL, 1000, 2),
                 new TaxiCar(7, 120, BodyType.SEDAN, EngineType.ELECTRIC, 1200, 2)
         );
-        Assert.assertEquals(taxiCarsBySpeedLimitList,taxiCompany.getTaxiCarListBySpeedRange(110,120));
+        Assert.assertEquals(taxiCarsBySpeedLimitList, taxiCompany.getTaxiCarListBySpeedRange(110, 120));
     }
 }

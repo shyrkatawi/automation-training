@@ -1,4 +1,4 @@
-package java_fundamentals.maintask;
+package fundamentals.maintask;
 
 /**
  * 4. Ввести целые числа как аргументы командной строки,

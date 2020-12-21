@@ -1,9 +1,9 @@
-package java_fundamentals.optionaltask2;
+package fundamentals.optionaltask2;
 
 import java.util.Random;
 import java.util.Scanner;
 
-class Methods {
+class Utils {
     static int getMatrixSizeFromScanner() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter the matrix size");

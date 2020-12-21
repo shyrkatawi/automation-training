@@ -1,12 +1,12 @@
-package java_fundamentals.optionaltask2;
+package fundamentals.optionaltask2;
 
 /**
  * 4. Найти максимальный элемент в матрице и удалить из матрицы все строки и столбцы,его содержащие
  */
 class Task4 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
-        Methods.printMatrix(matrix);
+        int[][] matrix = Utils.createMatrix(Utils.getMatrixSizeFromScanner());
+        Utils.printMatrix(matrix);
 
         int maxValueInMatix = matrix[0][0];
         for (int[] row : matrix) {
@@ -54,6 +54,6 @@ class Task4 {
                 rowTmp++;
             }
         }
-        Methods.printMatrix(resultMatrix);
+        Utils.printMatrix(resultMatrix);
     }
 }

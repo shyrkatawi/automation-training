@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask1;
+package fundamentals.optionaltask1;
 
 import java.util.Comparator;
 import java.util.List;
@@ -8,12 +8,12 @@ import java.util.List;
  */
 class Task2 {
     public static void main(String[] args) {
-        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        List<Integer> integerList = Utils.getIntegerListFromScanner();
         if (integerList.size() != 0) {
-            integerList.sort(Comparator.comparingInt(Methods::calculateLengthOfInteger));
-            Methods.printList(integerList, "sorted elements by length in ascending order");
-            integerList.sort(Comparator.comparingInt(Methods::calculateLengthOfInteger).reversed());
-            Methods.printList(integerList, "sorted elements by length in descending order");
+            integerList.sort(Comparator.comparingInt(Utils::calculateLengthOfInteger));
+            Utils.printList(integerList, "sorted elements by length in ascending order");
+            integerList.sort(Comparator.comparingInt(Utils::calculateLengthOfInteger).reversed());
+            Utils.printList(integerList, "sorted elements by length in descending order");
         }
     }
 }

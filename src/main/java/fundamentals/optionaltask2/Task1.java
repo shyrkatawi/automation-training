@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask2;
+package fundamentals.optionaltask2;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,13 +8,13 @@ import java.util.Comparator;
  */
 class Task1 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
+        int[][] matrix = Utils.createMatrix(Utils.getMatrixSizeFromScanner());
         int k = 3;
-        Methods.printMatrix(matrix);
+        Utils.printMatrix(matrix);
         sortRowsByColumnValues(matrix, k);
-        Methods.printMatrix(matrix);
+        Utils.printMatrix(matrix);
         sortColumnsByRowsValues(matrix, k);
-        Methods.printMatrix(matrix);
+        Utils.printMatrix(matrix);
     }
 
     static void sortRowsByColumnValues(int[][] matrix, int k) {

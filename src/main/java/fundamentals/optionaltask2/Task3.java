@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask2;
+package fundamentals.optionaltask2;
 
 import java.util.Arrays;
 
@@ -7,8 +7,8 @@ import java.util.Arrays;
  */
 class Task3 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
-        Methods.printMatrix(matrix);
+        int[][] matrix = Utils.createMatrix(Utils.getMatrixSizeFromScanner());
+        Utils.printMatrix(matrix);
         for (int[] array : matrix) {
             int indexOfFirstPositiveNumber = -1;
             int indexOfSecondPositiveNumber = -1;

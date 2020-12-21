@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask1;
+package fundamentals.optionaltask1;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
  */
 class Task4 {
     public static void main(String[] args) {
-        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        List<Integer> integerList = Utils.getIntegerListFromScanner();
         if (integerList.size() != 0) {
             int n = integerList.get(0);
             int minAmountOfDifferentDigits = getAmountOfDifferentDigits(n);

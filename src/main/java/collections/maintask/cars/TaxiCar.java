@@ -1,7 +1,9 @@
-package java_collections.maintask.cars;
+package collections.maintask.cars;
 
-import java_collections.maintask.types.BodyType;
-import java_collections.maintask.types.EngineType;
+import collections.maintask.types.BodyType;
+import collections.maintask.types.EngineType;
+
+import java.util.Objects;
 
 public class TaxiCar extends Car {
     private int maxNumberOfClients;
@@ -17,6 +19,19 @@ public class TaxiCar extends Car {
 
     public void endTaxiService() {
         System.out.println("service ended");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TaxiCar taxiCar = (TaxiCar) o;
+        return maxNumberOfClients == taxiCar.maxNumberOfClients;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), maxNumberOfClients);
     }
 
     @Override

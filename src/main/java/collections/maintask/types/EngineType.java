@@ -1,4 +1,4 @@
-package java_collections.maintask.types;
+package collections.maintask.types;
 
 public enum EngineType {
     ELECTRIC, PETROL, DIESEL

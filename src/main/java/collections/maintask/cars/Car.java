@@ -1,7 +1,9 @@
-package java_collections.maintask.cars;
+package collections.maintask.cars;
 
-import java_collections.maintask.types.BodyType;
-import java_collections.maintask.types.EngineType;
+import collections.maintask.types.BodyType;
+import collections.maintask.types.EngineType;
+
+import java.util.Objects;
 
 public abstract class Car {
     private int fuelConsumption;
@@ -28,6 +30,23 @@ public abstract class Car {
 
     public int getSpeed() {
         return speed;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return fuelConsumption == car.fuelConsumption &&
+                speed == car.speed &&
+                price == car.price &&
+                bodyType == car.bodyType &&
+                engineType == car.engineType;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fuelConsumption, speed, bodyType, engineType, price);
     }
 
     @Override

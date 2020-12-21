@@ -1,10 +1,10 @@
-package java_fundamentals.optionaltask1;
+package fundamentals.optionaltask1;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Methods {
+class Utils {
     static List<Integer> getIntegerListFromScanner() {
         try (Scanner scanner = new Scanner(System.in)) {
             List<Integer> integerList = new ArrayList<>();

@@ -1,4 +1,4 @@
-package java_fundamentals.maintask;
+package fundamentals.maintask;
 
 import java.time.Month;
 import java.util.Scanner;

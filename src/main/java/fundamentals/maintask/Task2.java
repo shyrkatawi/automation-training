@@ -1,4 +1,4 @@
-package java_fundamentals.maintask;
+package fundamentals.maintask;
 
 /**
  * 2. Отобразить в окне консоли аргументы командной строки в обратном порядке.

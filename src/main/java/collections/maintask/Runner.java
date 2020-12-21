@@ -1,8 +1,8 @@
-package java_collections.maintask;
+package collections.maintask;
 
-import java_collections.maintask.cars.TaxiCar;
-import java_collections.maintask.types.BodyType;
-import java_collections.maintask.types.EngineType;
+import collections.maintask.cars.TaxiCar;
+import collections.maintask.types.BodyType;
+import collections.maintask.types.EngineType;
 
 import java.util.Arrays;
 import java.util.List;

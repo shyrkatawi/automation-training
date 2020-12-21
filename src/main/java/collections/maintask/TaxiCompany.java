@@ -1,6 +1,6 @@
-package java_collections.maintask;
+package collections.maintask;
 
-import java_collections.maintask.cars.TaxiCar;
+import collections.maintask.cars.TaxiCar;
 
 import java.util.ArrayList;
 import java.util.Comparator;

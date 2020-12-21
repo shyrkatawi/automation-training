@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask2;
+package fundamentals.optionaltask2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,8 +9,8 @@ import java.util.List;
  */
 class Task2 {
     public static void main(String[] args) {
-        int[][] matrix = Methods.createMatrix(Methods.getMatrixSizeFromScanner());
-        Methods.printMatrix(matrix);
+        int[][] matrix = Utils.createMatrix(Utils.getMatrixSizeFromScanner());
+        Utils.printMatrix(matrix);
 
         int[] array = transformMatrixToArray(matrix);
         System.out.println(Arrays.toString(array));

@@ -1,4 +1,4 @@
-package java_fundamentals.optionaltask1;
+package fundamentals.optionaltask1;
 
 import java.util.List;
 
@@ -7,12 +7,12 @@ import java.util.List;
  */
 class Task1 {
     public static void main(String[] args) {
-        List<Integer> integerList = Methods.getIntegerListFromScanner();
+        List<Integer> integerList = Utils.getIntegerListFromScanner();
         if (integerList.size() != 0) {
-            int minLength = Methods.calculateLengthOfInteger(integerList.get(0));
-            int maxLength = Methods.calculateLengthOfInteger(integerList.get(0));
+            int minLength = Utils.calculateLengthOfInteger(integerList.get(0));
+            int maxLength = Utils.calculateLengthOfInteger(integerList.get(0));
             for (Integer i : integerList) {
-                int tmpLength = Methods.calculateLengthOfInteger(i);
+                int tmpLength = Utils.calculateLengthOfInteger(i);
                 if (minLength > tmpLength) {
                     minLength = tmpLength;
                 }
@@ -23,7 +23,7 @@ class Task1 {
             StringBuilder elementsWithMinLength = new StringBuilder();
             StringBuilder elementsWithMaxLength = new StringBuilder();
             for (Integer i : integerList) {
-                int tmpLength = Methods.calculateLengthOfInteger(i);
+                int tmpLength = Utils.calculateLengthOfInteger(i);
                 if (minLength == tmpLength) {
                     elementsWithMinLength.append(i).append(" ");
                 }
